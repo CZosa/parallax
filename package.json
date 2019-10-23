@@ -1,0 +1,38 @@
+{
+  "name": "parallax",
+  "version": "1.0.0",
+  "description": "An app that makes use of parallax effects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-dev": "webpack -d --watch",
+    "server": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CZosa/parallax.git"
+  },
+  "author": "Chris Z.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CZosa/parallax/issues"
+  },
+  "homepage": "https://github.com/CZosa/parallax#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "css-loader": "^3.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "style-loader": "^1.0.0"
+  }
+}
