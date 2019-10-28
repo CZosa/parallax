@@ -12,20 +12,20 @@ class ParallaxEffect extends React.Component {
         <Parallax ref={ref => (this.parallax = ref)} pages={4}>
 
           {/* dark grey background color */}
-          <ParallaxLayer factor={1} offset={0} speed={1} style={{ backgroundColor: '#253237' }} />
+          <ParallaxLayer factor={1.1} offset={0} speed={2.2} style={{ backgroundColor: '#253237' }} />
 
           {/* yellow background color */}
-          <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#EFF59B' }} />
+          <ParallaxLayer factor={1.1} offset={1} speed={2.1} style={{ backgroundColor: '#EFF59B' }} />
 
           {/* black background color */}
-          <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#000000' }} />
+          <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#FFA500' }} />
 
 
           
 
           <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
-            <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
-            <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+            {/* <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} /> */}
+            {/* <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} /> */}
           </ParallaxLayer>
 
           <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
@@ -33,14 +33,14 @@ class ParallaxEffect extends React.Component {
             <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%' }} />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0.5} speed={0.2} style={{ opacity: 0.2 }}>
+          <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
             <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
-            <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
+            {/* <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} /> */}
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0.8} speed={.1} style={{ opacity: 0.4 }}>
+          <ParallaxLayer offset={0.7} speed={0.1} style={{ opacity: 0.4 }}>
             <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-            <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+            <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '10%' }} />
             <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
           </ParallaxLayer>
 
@@ -64,7 +64,7 @@ class ParallaxEffect extends React.Component {
           {/* ava logo */}
           <ParallaxLayer
             offset={0}
-            speed={0.6}
+            speed={1}
             onClick={() => this.parallax.scrollTo(1)}
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img src={images.ava} />
@@ -72,33 +72,41 @@ class ParallaxEffect extends React.Component {
 
           {/* building icon */}
           <ParallaxLayer
-            offset={0.8}
-            speed={0.5}
+            offset={0.75}
+            speed={0.6}
             onClick={() => this.parallax.scrollTo(1)}
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={images.building} style={{ width: '20%' }} />
+            <img src={images.building} style={{ width: '25%', marginTop: '5%' }} />
+          </ParallaxLayer>
+
+          {/* meeting room icon */}
+          <ParallaxLayer
+            offset={1.0}
+            speed={1.1}
+            onClick={() => this.parallax.scrollTo(2)}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src={images.meeting} style={{ width: '50%', marginTop: '10%' }} />
           </ParallaxLayer>
           
-          {/* worker icon */}
+          {/* worker1 icon */}
           <ParallaxLayer 
-            offset={0.5} 
-            speed={-0.8} 
+            offset={0.75} 
+            speed={0.2} 
             style={{ pointerEvents: 'none' }}>
             <img src={images.worker} style={{ width: '10%', marginLeft: '70%', marginTop: '15%' }} />
+          </ParallaxLayer>
+
+          {/* worker2 icon */}
+          <ParallaxLayer 
+            offset={1.3} 
+            speed={0.65} 
+            style={{ pointerEvents: 'none' }}>
+            <img src={images.worker} style={{ width: '10%', marginLeft: '10%', marginTop: '10%' }} />
           </ParallaxLayer>
           
           {/* rocket icon */}
           <ParallaxLayer offset={3.0} speed={1.0} style={{ pointerEvents: 'none' }}>
             <img src={images.rocket} style={{ width: '15%', marginLeft: '60%' }} />
-          </ParallaxLayer>
-
-          {/* meeting room icon */}
-          <ParallaxLayer
-            offset={1.05}
-            speed={0.35}
-            onClick={() => this.parallax.scrollTo(2)}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={images.meeting} style={{ width: '40%' }} />
           </ParallaxLayer>
 
           {/* earth icon */}
