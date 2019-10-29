@@ -9,16 +9,19 @@ class ParallaxEffect extends React.Component {
   render() { 
     return (
       <div className="parallax-container">
-        <Parallax ref={ref => (this.parallax = ref)} pages={4}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={3.18}>
 
           {/* dark grey background color */}
           <ParallaxLayer factor={1.1} offset={0} speed={2.2} style={{ backgroundColor: '#253237' }} />
 
           {/* yellow background color */}
-          <ParallaxLayer factor={1.1} offset={1} speed={2.1} style={{ backgroundColor: '#EFF59B' }} />
+          <ParallaxLayer factor={1.1} offset={1} speed={2.2} style={{ backgroundColor: '#EFF59B' }} />
+
+          {/* orange background color */}
+          <ParallaxLayer factor={1} offset={2.1} speed={1} style={{ backgroundColor: '#FFA500' }} />
 
           {/* black background color */}
-          <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#FFA500' }} />
+          <ParallaxLayer factor={1.1} offset={2.5} speed={2.1} style={{ backgroundColor: '#000000' }} />
 
 
           
@@ -81,25 +84,25 @@ class ParallaxEffect extends React.Component {
 
           {/* meeting room icon */}
           <ParallaxLayer
-            offset={1.0}
-            speed={1.1}
+            offset={1}
+            speed={1.2}
             onClick={() => this.parallax.scrollTo(2)}
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={images.meeting} style={{ width: '50%', marginTop: '10%' }} />
+            <img src={images.meeting} style={{ width: '50%', marginTop: '5%' }} />
           </ParallaxLayer>
           
           {/* worker1 icon */}
           <ParallaxLayer 
-            offset={0.75} 
-            speed={0.2} 
+            offset={0.77} 
+            speed={0.3} 
             style={{ pointerEvents: 'none' }}>
             <img src={images.worker} style={{ width: '10%', marginLeft: '70%', marginTop: '15%' }} />
           </ParallaxLayer>
 
           {/* worker2 icon */}
           <ParallaxLayer 
-            offset={1.3} 
-            speed={0.65} 
+            offset={1.2} 
+            speed={0.7} 
             style={{ pointerEvents: 'none' }}>
             <img src={images.worker} style={{ width: '10%', marginLeft: '10%', marginTop: '10%' }} />
           </ParallaxLayer>
